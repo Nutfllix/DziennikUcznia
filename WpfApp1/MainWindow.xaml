@@ -1,0 +1,45 @@
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Dziennik Ucznia" Height="530" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#F5F5F5">
+        <StackPanel Margin="30">
+            <TextBlock Text="Dziennik Ucznia"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"
+                       Foreground="#333333" />
+
+            <!-- Imię ucznia -->
+            <TextBlock Text="Imię ucznia:" FontWeight="SemiBold" Margin="0,0,0,5" />
+            <TextBox x:Name="txtImie" Height="32" VerticalContentAlignment="Center" Padding="5,0" Margin="0,0,0,12" />
+
+            <!-- Wiek ucznia -->
+            <TextBlock Text="Wiek ucznia:" FontWeight="SemiBold" Margin="0,0,0,5" />
+            <TextBox x:Name="txtWiek" Height="32" VerticalContentAlignment="Center" Padding="5,0" Margin="0,0,0,12" />
+
+            <!-- Pole TextBox do wprowadzania oceny ucznia -->
+            <TextBlock Text="Ocena ucznia (1–6):" FontWeight="SemiBold" Margin="0,0,0,5" />
+            <TextBox x:Name="txtOcena" Height="32" VerticalContentAlignment="Center" Padding="5,0" Margin="0,0,0,18" />
+
+            <!-- Przycisk Zatwierdź -->
+            <Button Content="Zatwierdź" Height="40" Click="BtnZatwierdz_Click"
+                    Background="#0078D7" Foreground="White" FontWeight="Bold" FontSize="14" Cursor="Hand" />
+
+            <!-- Kontrolka TextBlock do wyświetlania wyniku i komunikatów -->
+            <TextBlock x:Name="txtWynik" FontSize="15" Margin="0,15,0,15"
+                       HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"
+                       FontWeight="SemiBold" Foreground="Red" />
+
+            <!-- Przycisk Resetuj -->
+            <Button Content="Resetuj" Height="32" Click="BtnResetuj_Click"
+                    Background="#E0E0E0" Foreground="#333333" FontWeight="SemiBold" Cursor="Hand" />
+        </StackPanel>
+    </Grid>
+</Window>
